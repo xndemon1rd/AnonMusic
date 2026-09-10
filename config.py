@@ -22,7 +22,7 @@ API_ID = validate_env_var("API_ID", cast_type=int)
 API_HASH = validate_env_var("API_HASH")
 BOT_TOKEN = validate_env_var("BOT_TOKEN")
 LOGGER_ID = validate_env_var("LOGGER_ID", cast_type=int)
-OWNER_ID = validate_env_var("OWNER_ID", cast_type=int)
+OWNER_ID = validate_env_var("7983098956", cast_type=int)
 MONGO_DB_URI = getenv("MONGO_DB_URI")
 
 BASE_API_URL = getenv("BASE_API_URL", "https://api.vibebots.fun")
