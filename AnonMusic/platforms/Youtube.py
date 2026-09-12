@@ -147,7 +147,7 @@ class YouTubeAPI:
         if not cookie_file:
             return [], link
         
-        ytdl_opts = {"quiet": True, "cookiefile": cookie_file}
+        ytdl_opts = {"quiet": True, "cookiefile": cookie_file, "remote_components": {"ejs:github"}}
         ydl = yt_dlp.YoutubeDL(ytdl_opts)
         
         with ydl:
@@ -231,6 +231,7 @@ class YouTubeAPI:
                     "geo_bypass": True,
                     "quiet": True,
                     "cookiefile": cookie_file,
+            "remote_components": {"ejs:github"},
                     "no_warnings": True,
                 }
             else:
@@ -240,6 +241,7 @@ class YouTubeAPI:
                     "geo_bypass": True,
                     "quiet": True,
                     "cookiefile": cookie_file,
+            "remote_components": {"ejs:github"},
                     "no_warnings": True,
                 }
             
@@ -258,3 +260,4 @@ class YouTubeAPI:
         except Exception as e:
             logger.error(f"Fallback failed: {e}")
             return None, False
+Youtube = YouTubeAPI
